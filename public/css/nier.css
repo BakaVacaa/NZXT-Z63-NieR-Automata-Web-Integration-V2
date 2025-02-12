@@ -1,0 +1,202 @@
+@charset "UTF-8";
+*:focus {
+  outline: none !important;
+}
+
+@font-face {
+  font-family: "Rodin";
+  src: url("rodin-db.otf");
+}
+
+html, body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+body {
+  background-color: #C8C2AA;
+  background-size: 4px 4px;
+  background-image: 
+    url("../img/YoRHaLogo.png"),
+    linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,.07) 4px),
+    linear-gradient(transparent, transparent 3px, rgba(0,0,0,.07) 4px);
+  color: #4D493E;
+  font-family: "Rodin";
+  font-weight: 300;
+  margin: 0;
+  box-shadow: inset 0 0 150px rgba(77, 73, 62, 0.4), inset 0 0 150px rgba(77, 73, 62, 0.3);
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.1rem;
+  border-radius: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 320px; /* Adjusted size */
+  height: 320px; /* Adjusted size */
+}
+
+.container {
+  padding: 0 1rem; /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left align items */
+}
+
+.container.no-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Align items at the top */
+  height: 100%; /* Ensure the container takes full height */
+}
+
+.no-bar .content {
+  border-top: none; /* Remove the top border */
+  padding-left: 0; /* Remove left padding */
+  background-image: none; /* Remove background image */
+  width: 100%; /* Ensure content takes full width */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+}
+
+.no-bar .image-2b {
+  max-height: 200px;
+  width: auto;
+  margin-top: 8px; /* Add margin to push the image down */
+}
+
+header {
+  padding: 0.5rem 0; /* Reduced padding */
+  margin-top: 0px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.3rem; /* Adjusted letter spacing */
+  text-shadow: 0.15rem 0.15rem 0 rgba(77, 73, 62, 0.3); /* Adjusted shadow */
+  margin-top:15px; /* Adjusted for better fit */
+  font-size: 22px; /* Reduced font size */
+  margin-bottom: 2px; /* Adjusted for better fit */
+  text-align: left; /* Left align text */
+}
+
+h2 span.japanese-text {
+  display: block; /* Ensure it stays on one line */
+  white-space: nowrap; /* Prevent text wrapping */
+    margin-top: 10px;
+}
+
+h2 small {
+  font-weight: 500;
+  text-transform: none;
+  text-shadow: none;
+  letter-spacing: 0.05rem; /* Adjusted letter spacing */
+}
+
+h2 small::before {
+  content: "–";
+}
+
+.pattern {
+  border-top: 1px solid #4D493E; /* Adjusted border */
+}
+
+.pattern-inner {
+  height: 20px; /* Reduced height */
+  background-size: 25px 1.5px; /* Adjusted size */
+  background-position: 0 0, 11px 2px, 14px 6px;
+  background-image: 
+    linear-gradient(90deg, #4D493E, #4D493E 5px, transparent 5px),
+    linear-gradient(90deg, rgba(77, 73, 62, 0.4), rgba(77, 73, 62, 0.4) 0.5px, rgba(77, 73, 62, 0.8) 0.5px, rgba(77, 73, 62, 0.8) 1px, rgba(77, 73, 62, 0.9) 1px, rgba(77, 73, 62, 0.9) 1.5px, rgba(77, 73, 62, 0.4) 1.5px, rgba(77, 73, 62, 0.4) 2px, transparent 2px, transparent 6px);
+  background-repeat: repeat-x;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  padding: 0.05rem 0.5rem; /* Adjust padding */
+  background-color: rgba(77, 73, 62, 0.35);
+  color: #4D493E;
+  box-sizing: content-box;
+  position: relative;
+  border: 1px solid transparent;
+  border-left: none;
+  border-right: none;
+  font-size: 17px; /* Adjust font size */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 32px; /* Set a fixed height */
+}
+
+button img {
+  margin-right: 0.5rem; /* Space between icon and text */
+  vertical-align: middle; /* Center icon vertically */
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #4D493E;
+  transition: width 0.2s;
+}
+
+button::after {
+  content: "";
+  display: none;
+  position: absolute;
+  background: #4D493E;
+  width: 100%;
+  height: 0px;
+  left: 0;
+  bottom: -10px;
+}
+
+button:hover::before, button:focus::before {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+main {
+  flex: 1;
+}
+
+.info-text {
+  font-size: 15px; /* Reduced font size */
+  line-height: 1.7; /* Space Between Lines */
+}
+
+.content {
+  padding-left: 1.5rem; /* Reduced padding */
+  background-image: linear-gradient(90deg, rgba(77, 73, 62, 0.2), rgba(77, 73, 62, 0.2) 7px, transparent 7px, transparent 10px, rgba(77, 73, 62, 0.2) 10px, rgba(77, 73, 62, 0.2) 11.5px, transparent 11.5px);
+}
+
+sys {
+  box-shadow: 1.5px 1.5px 0 rgba(77, 73, 62, 0.6); /* Adjusted shadow */
+}
+
+img {
+  max-width: 100%; /* Ensure image fits within the circle */
+  max-height: 100%; /* Ensure image fits within the circle */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+.japanese-text {
+  word-wrap: break-word; /* Allow wrapping */
+  text-align: center; /* Left align text */
+  width: 100%; /* Ensure it fits within the circle */
+}
