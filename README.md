@@ -5,7 +5,7 @@ Web interface for Kraken Z63
 ![Interface preview](./public/demo.png)
 
 ## Quickstart
-Paste the following url in NZXT CAM: 
+Paste the following url in NZXT CAM: https://bakavacaa.github.io/NZXT-Z63-NieR-Automata-Web-Integration-V2/
 
 ## Note
 This is version 2. I plan to create more versions, but please note that earlier versions will not be maintained. I will only keep up with the versions I actively use.
