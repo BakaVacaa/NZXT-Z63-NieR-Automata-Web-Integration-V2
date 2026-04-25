@@ -32,9 +32,9 @@ function update_module(totalRam, useRam, liquidTemperature) {
 
     let statusLabel = "Unknown";
     if (typeof liquidTemperature === "number") {
-        if (liquidTemperature <= 50) {
+        if (liquidTemperature <= 40) {
             statusLabel = "Green";
-        } else if (liquidTemperature > 50 && liquidTemperature <= 60) {
+        } else if (liquidTemperature > 40 && liquidTemperature <= 55) {
             statusLabel = "Yellow";
         } else {
             statusLabel = "Red";
